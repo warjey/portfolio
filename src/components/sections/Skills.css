@@ -1,0 +1,104 @@
+.skills__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.skills__filter {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.25rem;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-xs);
+  background: none;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+}
+
+.skills__filter:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-subtle);
+}
+
+.skills__filter[aria-pressed='true'] {
+  color: var(--color-text);
+  border-color: var(--color-accent-line);
+  background: var(--color-accent-soft);
+}
+
+/* Level markers: solid → applied, half → coursework, outline → learning */
+.skill-marker {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: 1px;
+}
+
+.skill-marker--applied {
+  background: var(--color-accent);
+}
+
+.skill-marker--academic {
+  background: linear-gradient(90deg, var(--color-accent) 50%, transparent 50%);
+}
+
+.skill-marker--learning {
+  border-color: var(--color-text-subtle);
+  background: none;
+}
+
+.skills__groups {
+  border-top: 1px solid var(--color-line);
+}
+
+.skill-group {
+  display: grid;
+  gap: var(--space-3);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.skill-group__title {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-text);
+}
+
+.skill-group__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  transition: opacity var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out);
+}
+
+.skills__groups:not([data-focus='all']) .skill:not(.is-dimmed) {
+  color: var(--color-text);
+}
+
+.skill.is-dimmed {
+  opacity: 0.3;
+}
+
+@media (min-width: 720px) {
+  .skill-group {
+    grid-template-columns: 13rem 1fr;
+    gap: var(--space-5);
+    align-items: baseline;
+  }
+}

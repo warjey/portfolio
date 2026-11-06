@@ -1,0 +1,35 @@
+export const education = [
+  {
+    id: 'college',
+    level: 'Tertiary',
+    program: 'Bachelor of Science in Information Technology',
+    school: 'STI College San Jose Del Monte',
+    period: '2023 — Present',
+    current: true,
+    note: "President's Lister, 2023–2026",
+  },
+  {
+    id: 'senior-high',
+    level: 'Senior High School',
+    program: 'Science, Technology, Engineering & Mathematics (STEM)',
+    school: 'Sapang Palay National High School',
+    period: '2021 — 2023',
+    note: 'With High Honor, Grades 11–12',
+  },
+  {
+    id: 'junior-high',
+    level: 'Junior High School',
+    program: 'Junior High School',
+    school: 'San Jose Del Monte National Trade School',
+    period: '2017 — 2021',
+    note: 'With Honor, Grades 7–10',
+  },
+  {
+    id: 'elementary',
+    level: 'Elementary',
+    program: 'Elementary Education',
+    school: 'San Martin BBC Elementary School',
+    period: '2011 — 2017',
+    note: 'With Honor, Top 5 Overall, Grade 6',
+  },
+]
